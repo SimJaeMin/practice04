@@ -1,12 +1,12 @@
 package prob02;
-
+import java.util.Scanner;
 public class BookShop {
 
 	public static void main(String[] args) {
 		Book[] books = new Book[10];
 		
-		books[0] = new Book( 1, "트와일라잇", "스테파니메이어" );
-		books[1] = new Book( 2,"뉴문", "스테파니메이어" );
+		books[0] = new Book( 1, "트와일라잇", "스테파니메이어");
+		books[1] = new Book( 2,"뉴문", "스테파니메이어");
 		books[2] = new Book( 3,"이클립스","스테파니메이어");
 		books[3] = new Book( 4,"브레이킹던","스테파니메이어");
 		books[4] = new Book( 5,"아리랑","조정래");
@@ -32,5 +32,9 @@ public class BookShop {
 		System.out.println("*****도서 정보 출력하기******");
 		displayBookInfo( books );
 	}
-
+        public static void displayBookInfo(Book[] books){ // 대여 할수 있으면 재고있음 없으면 재고없음
+        	for(int i=0;i<books.length;i++)
+        	books[i].print();
+	
+}
 }
